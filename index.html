@@ -1,20 +1,107 @@
-<html>
+<!DOCTYPE html>
+<html lang="ru">
 <head>
- <title>Arduino and indicators</title>
+  <meta charset="UTF-8">
+  <title>Ардуино и индикаторы</title>
+  <style>
+    :root {
+      --bg: #f5f7fa;
+      --card: #ffffff;
+      --accent: #4a90e2;
+      --text: #333333;
+      --muted: #666666;
+      --radius: 12px;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      --max-width: 680px;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 3rem 1rem;
+    }
+    .wrapper {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: var(--accent);
+    }
+    .subtitle {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+      margin: 2rem 0 1rem;
+      color: var(--accent);
+    }
+    ul {
+      list-style: none;
+      display: grid;
+      gap: 1.5rem;
+    }
+    a.card {
+      display: block;
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+      transition: transform .2s;
+      text-decoration: none;
+      color: inherit;
+    }
+    a.card:hover {
+      transform: translateY(-4px);
+    }
+    h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: var(--accent);
+    }
+    p {
+      color: var(--muted);
+    }
+  </style>
 </head>
 <body>
-<b>Ардуино и индикаторы</b>
-<br>
-Подключение индикаторов к Arduino и управление ими на примерах: от простейшего включения и выключения встроенного светодиода 
-до сложных систем с множеством индикаторов. В основном рассматриваются светодиодные семисегментные индикаторы, но не только они.
-<br>
-<ul>
- <li><A href="https://x40in.github.io/ARD-IND-010-built-in/">встроенный светодиод Arduino</A></li>
- <li>внешние дискретные светодиоды</li>
- <li><A href="https://x40in.github.io/ARD-IND-020-7seg/">семисегментный светодиодный индикатор с общим катодом</A</li>
- <li>семисегментный светодиодный индикатор с произвольным общим электродом</li>
-</ul>
+  <div class="wrapper">
+    <h1>Ардуино и индикаторы</h1>
+    <p class="subtitle">Цикл программ (скетчей) для Ардуино, в которых последовательно, начиная с самых простых конфигураций, иллюстрируется работа с индикаторами (светодиодами, лампочками, матрицами). Цикл начинается с управления встроенным светодиодом Ардуино, затем рассматриваются дискретные внешние светодиоды, одно- и многоразрядные светодиодные индикаторы, матрицы, системы с несколькими индикаторами. Используется Arduino UNO, подключённая своим портом USB к компьютеру под Windows, а для управления индикаторами с компьютера оператор вводит команды в мониторе последовательного порта Arduino IDE.</p>
 
-<br>
+    <h2>1. Штучные светоизлучатели</h2>
+    <ul>
+      <li><a class="card" href="https://x40in.github.io/ARD-IND-010-built-in/">
+        <h3>Встроенный светодиод Ардуино</h3>
+        <p>Включаем и выключаем встроенный светодиод.</p>
+      </a></li>
+      <li><a class="card" href="page1-2.html">
+        <h3>Дискретные внешние светодиоды</h3>
+        <p>Включаем и выключаем внешние светодиоды.</p>
+      </a></li>
+    </ul>
+
+    <h2>2. Сегментные знакосинтезирующие индикаторы</h2>
+    <ul>
+      <li><a class="card" href="https://x40in.github.io/ARD-IND-020-7seg/">
+        <h3>Семисегментный индикатор с общим катодом</h3>
+        <p>Зажигаем цифры и знаки на семисегментном индикаторе.</p>
+      </a></li>
+      <li><a class="card" href="https://x40in.github.io/ARD-IND-020-7seg/">
+        <h3>Семисегментный индикатор с произвольным общим электродом</h3>
+        <p>Общий катод или общий анод &mdash; почти неважно, программа одна и та же.</p>
+      </a></li>
+    </ul>
+  </div>
 </body>
 </html>
+```
